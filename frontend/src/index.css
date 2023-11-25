@@ -1,0 +1,160 @@
+body.no-gradient {
+  /* Or set it to a solid color or any other style you prefer */
+  animation: none;
+}
+
+body {
+  color: white;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: auto;
+  background: linear-gradient(
+    135deg,
+    rgb(5, 24, 109) 18%,
+    rgb(26, 118, 172) 88%,
+    rgb(17, 2, 83) 28%,
+    rgb(28, 127, 184) 100%
+  );
+  animation: gradient 25s ease infinite; /* Adjusted animation speed to 25s */
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(1) translateY(2px);
+    background: #3344ff; /* Adjusted wave color */
+  }
+
+  25% {
+    transform: translateX(-25%) translateY(-5px);
+    background: #000000; /* Adjusted wave color */
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(10px);
+    background: #3d33ff; /* Adjusted wave color */
+  }
+
+  75% {
+    transform: translateX(-25%) translateY(-5px);
+    background: #000000; /* Adjusted wave color */
+  }
+
+  100% {
+    transform: translateX(1) translateY(2px);
+    background: #333dff; /* Adjusted wave color */
+  }
+}
+
+.site-container {
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+.btn-primary,
+.btn-outline-primary {
+  background-color: #007bff;
+  color: white;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rating span {
+  color: #ffc000;
+}
+
+.product {
+  border: 1px #404040 solid;
+  margin: 1rem;
+}
+.product img {
+  width: 100%;
+  max-width: 400px;
+}
+.product-info {
+  padding: 1rem;
+}
+.img-large {
+  max-width: 100%;
+}
+.img-thumbnail {
+  height: 80px;
+}
+.small-container {
+  max-width: 600px;
+}
+
+/* sidebar */
+.navbar-brand {
+  font-weight: bold;
+}
+.side-navbar {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #100901;
+  transition: 0.5s;
+}
+.card {
+  height: 100%; /* Set a fixed height for the cards */
+}
+
+.site-container {
+  transition: 0.4s;
+}
+.active-cont {
+  margin-left: 240px;
+}
+.active-nav {
+  left: 0;
+}
+.text-bold {
+  font-weight: bold;
+}
