@@ -5,7 +5,7 @@ Critiquo is a Product Review Platform (P39) developed by Team 354, focusing on g
 ## Deployment
 
 Check out the deployed version of the project:
-https://critiquo-games-and-reviews.onrender.com
+https://critiquo-games-and-reviews.onrender.com/
 
 ## Table of Contents
 
